@@ -4,7 +4,6 @@ import webbrowser
 
 app = Flask(__name__)
 
-<<<<<<< HEAD
 # 重大事故時の通知ロジック
 def send_mail(date, location, title, detail):
     print("\n===== ⚠️ 重大事故通知 =====")
@@ -15,9 +14,6 @@ def send_mail(date, location, title, detail):
     print("==========================\n")
 
 # データベース初期化（『場所』カラムをしっかり追加）
-=======
-# データベース作成
->>>>>>> 3c79296ed6231c22b726116c75140fb9c745f708
 def init_db():
     conn = sqlite3.connect("incidents.db")
     cur = conn.cursor()
@@ -150,13 +146,8 @@ def delete(id):
 # アプリ起動のメイン処理
 if __name__ == "__main__":
     init_db()
-<<<<<<< HEAD
     
     # アプリ起動時にブラウザを自動でポップアップさせる
     webbrowser.open("http://127.0.0.1:5000")
     
     app.run(debug=True, use_reloader=False)
-=======
-
-    app.run(debug=True)
->>>>>>> 3c79296ed6231c22b726116c75140fb9c745f708
